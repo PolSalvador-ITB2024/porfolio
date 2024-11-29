@@ -1,0 +1,66 @@
+.education-section {
+    padding: 60px 20px;
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+}
+
+.education-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.titulo-education {
+    font-size: 3rem;
+    color: #FF0000;
+    font-family: 'Fredoka One', sans-serif;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.descripcion-education {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    color: #ccc;
+    line-height: 1.6;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.education-item {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.education-item h3 {
+    font-size: 1.8rem;
+    color: #FF0000;
+}
+
+.education-item p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.education-item strong {
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .education-section {
+        padding: 30px 15px;
+    }
+
+    .titulo-education {
+        font-size: 2.5rem;
+    }
+
+    .descripcion-education {
+        font-size: 1.3rem;
+    }
+
+    .education-item h3 {
+        font-size: 1.6rem;
+    }
+}

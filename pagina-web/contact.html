@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Pol Salvador</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            overflow-x: hidden;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+
+        header, footer {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .contact-section {
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-section h1 {
+            font-size: 3rem;
+            color: #FF0000;
+            margin-bottom: 20px;
+        }
+
+        .contact-form {
+            background: #1a1a1a;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .contact-form label {
+            display: block;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #f0e68c;
+        }
+
+        .contact-form input, 
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .contact-form textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        .contact-form button {
+            width: 100%;
+            background: linear-gradient(90deg, #FF0000, #f0e68c);
+            border: none;
+            color: #fff;
+            padding: 15px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .contact-form button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(255, 0, 0, 0.5);
+        }
+
+        .success-message {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            color: #0f0;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <h1><a href="index.html" style="color: #fff; text-decoration: none;">HPS Industries</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" style="color: #fff;">Home</a></li>
+                <li><a href="about.html" style="color: #fff;">About</a></li>
+                <li><a href="education.html" style="color: #fff;">Education</a></li>
+                <li><a href="work.html" style="color: #fff;">Work</a></li>
+                <li><a href="contact.html" style="color: #fff;">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact-section">
+        <h1>Contact Me</h1>
+        <form id="contactForm" class="contact-form">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="company">Company Name</label>
+            <input type="text" id="company" name="company" placeholder="Enter your company name" required>
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+        <p id="successMessage" class="success-message">Message sent successfully! (Simulated)</p>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <div class="row">
+                <a href="https://web.telegram.org/"><i class="fa fa-telegram"></i></a>
+                <a href="https://www.instagram.com/itecbcn/"><i class="fa fa-instagram"></i></a>
+                <a href="https://github.com/https://github.com/"><i class="fa fa-github"></i></a>
+                <a href="https://twitter.com/itecbcn?lang=ca"><i class="fa fa-twitter"></i></a>
+            </div>
+            <div class="row">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/education.html">Education</a></li>
+                    <li><a href="/work.html">Work</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="row">
+                INFERNO Copyright © 2024 Pol Salvador - All rights reserved
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simulación de envío de formulario
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Evita el envío real del formulario
+            document.getElementById('successMessage').style.display = 'block'; // Muestra el mensaje de éxito simulado
+            setTimeout(() => {
+                document.getElementById('successMessage').style.display = 'none'; // Oculta el mensaje después de 3 segundos
+                this.reset(); // Resetea el formulario
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
